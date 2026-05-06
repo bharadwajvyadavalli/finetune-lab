@@ -1,0 +1,9 @@
+# Inference-only deps for HuggingFace Spaces (GPU tier with T4/A10G).
+gradio>=4
+transformers>=4.40
+peft>=0.10
+torch>=2.2
+sentencepiece>=0.2
+accelerate>=0.29
+huggingface_hub>=0.22
+bitsandbytes>=0.42

@@ -1,0 +1,18 @@
+# Core training stack — install on the AWS g5 instance.
+# Pinned to ranges known to work for Mistral-7B + QLoRA + DPO on A10G.
+torch>=2.2,<3
+transformers>=4.40
+peft>=0.10
+trl>=0.9
+accelerate>=0.29
+bitsandbytes>=0.43
+datasets>=2.18
+
+# Tokenizer + serialization deps Mistral pulls in
+sentencepiece>=0.2
+protobuf>=4
+
+# Configs and Hub interaction
+pyyaml>=6
+huggingface_hub>=0.22
+tqdm>=4
