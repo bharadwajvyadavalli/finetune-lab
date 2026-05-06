@@ -46,6 +46,10 @@ Trained on 10k samples from `b-mc2/sql-create-context`:
 | Quantization | bitsandbytes 4-bit NF4 |
 | Demo | Gradio on HuggingFace Spaces (ZeroGPU) |
 
+## Architecture
+
+![AWS Architecture](aws_architecture.png)
+
 ## Repo Layout
 
 ```
