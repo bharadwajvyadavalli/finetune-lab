@@ -2,6 +2,17 @@
 
 End-to-end fine-tuning sprint: Mistral-7B → Text-to-SQL, comparing QLoRA SFT, LoRA SFT (bf16), and DPO.
 
+## Architecture
+
+![AWS Architecture](aws_architecture.png)
+
+End-to-end MLOps workflow for foundation model fine-tuning:
+
+- **Data Tier**: Raw and labeled datasets stored in Amazon S3
+- **Training Tier**: AWS EC2 g5.12xlarge (4x A10G GPUs) runs SFT, DPO training, and preference pair synthesis
+- **Model Registry**: Fine-tuned LoRA adapters pushed to HuggingFace Hub
+- **Inference**: Gradio demo hosted on HuggingFace Spaces with ZeroGPU
+
 ## Live Demo
 
 **[Try it now on HuggingFace Spaces](https://huggingface.co/spaces/bharadwajvyadavalli/mistral-sql-demo)**
@@ -45,10 +56,6 @@ Trained on 10k samples from `b-mc2/sql-create-context`:
 | Framework | HuggingFace transformers, peft, trl, accelerate |
 | Quantization | bitsandbytes 4-bit NF4 |
 | Demo | Gradio on HuggingFace Spaces (ZeroGPU) |
-
-## Architecture
-
-![AWS Architecture](aws_architecture.png)
 
 ## Repo Layout
 
